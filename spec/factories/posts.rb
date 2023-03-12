@@ -1,13 +1,13 @@
 FactoryBot.define do
   factory :post do
     date { Date.today }
-    rationale { "Some Rationale" }
-    association :user
+    sequence(:rationale) { |n| "Rationale Content #{n}" }
+    user
   end
 
   factory :second_post, class: "Post" do
     date { Date.yesterday }
-    rationale { "Some Rationale" }
-    association :user
+    sequence(:rationale) { |n| "Rationale Content #{n}" }
+    user
   end
 end

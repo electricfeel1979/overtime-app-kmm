@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   describe 'Creation' do
     before do
-      @user = User.create(:first_name => 'Buru', :last_name => 'gudoy', email: 'test@test.com', password: '123123', password_confirmation: '123123')
+      @user = FactoryBot.create(:user)
       # debugger
-      @post = Post.create(date: Date.today, rationale: 'Anything', user_id: @user.id)
+      @post = FactoryBot.build_stubbed(:post, user: @user)
     end
     it 'can be created' do
       expect(@post).to be_valid
