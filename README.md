@@ -4,9 +4,9 @@
 
 ## Models
 
-x Post -> date:date rationale:text
-x User -> Devise
-x AdminUser -> STI
+- x Post -> date:date rationale:text
+- x User -> Devise
+- x AdminUser -> STI
 
 ## Features:
 
@@ -22,4 +22,5 @@ x AdminUser -> STI
 
 ## Refactor TODOS:
 
+- Add full_name method
 - Refactor user association integration test in post_spec
