@@ -27,5 +27,6 @@ Rails.application.configure do
   config.assets.quiet = true
 
   #kevmm
+  config.sass.inline_source_maps = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3001 }
 end
