@@ -48,8 +48,8 @@ end
 gem 'devise', '~> 4.9'
 gem "cssbundling-rails", "~> 1.1"
 gem 'sassc-rails'
+gem "jsbundling-rails", "~> 1.1"
 ##########
 
 
 
-gem "jsbundling-rails", "~> 1.1"
