@@ -46,10 +46,7 @@ end
 
 #added by kevmm
 gem 'devise', '~> 4.9'
-gem "cssbundling-rails", "~> 1.1"
-gem 'sassc-rails'
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'
+gem 'jquery-rails'
 ##########
-
-
-
-gem "jsbundling-rails", "~> 1.1"

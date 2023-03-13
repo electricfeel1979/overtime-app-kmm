@@ -23,9 +23,3 @@
 ## Refactor TODOS:
 
 - Refactor user association integration test in post_spec
-
-## Important stuffs
-
-web: bin/rails server -p 3000
-js: yarn build —watch
-css: yarn build:css —watch
