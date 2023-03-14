@@ -49,6 +49,9 @@ gem 'devise', '~> 4.9'
 gem "cssbundling-rails", "~> 1.1"
 gem 'sassc-rails'
 gem "jsbundling-rails", "~> 1.1"
+
+gem 'administrate', "~> 0.18.0"
+gem "bourbon"
 ##########
 
 
