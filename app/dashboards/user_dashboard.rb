@@ -19,7 +19,6 @@ class UserDashboard < Administrate::BaseDashboard
 
   COLLECTION_ATTRIBUTES = %i[
     posts
-    id
     email
     encrypted_password
     first_name
@@ -27,7 +26,6 @@ class UserDashboard < Administrate::BaseDashboard
   ].freeze
 
   SHOW_PAGE_ATTRIBUTES = %i[
-    id
     email
     encrypted_password
     first_name
