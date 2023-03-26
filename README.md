@@ -27,6 +27,7 @@
 
 - Refactor user association integration test in post_spec
 - Refactor for bootstrap 5
+- Fix post_spec.rb
 
 ## Important stuffs
 
