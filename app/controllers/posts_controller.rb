@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-
+    authorize @post
   end
 
   def show
@@ -32,7 +32,9 @@ class PostsController < ApplicationController
     redirect_to posts_path, notice: 'Your post was deleted successfully'
   end
 
-  def update 
+  def update
+    authorize @post
+
     if @post.update(post_params)
       redirect_to @post, notice: 'Your post was edited successfully'
     else
