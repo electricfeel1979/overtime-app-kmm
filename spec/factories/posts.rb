@@ -10,4 +10,10 @@ FactoryBot.define do
     sequence(:rationale) { |n| "Rationale Content #{n}" }
     user
   end
+
+  factory :post_from_other_user, class: "Post" do
+    date { Date.yesterday }
+    sequence(:rationale) { |n| "Rationale Content #{n}" }
+    user
+  end
 end
