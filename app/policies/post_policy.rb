@@ -11,7 +11,7 @@ class PostPolicy < ApplicationPolicy
   end
 
   def admin?
-    admin_types.include?(user)
+    admin_types.include?(user.type)
   end
 
   def post_approved?
