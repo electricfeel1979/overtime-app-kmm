@@ -55,6 +55,8 @@ gem "bourbon"
 gem 'pundit', '~> 2.3'
 
 gem 'twilio-ruby', '~> 5.76'
+
+gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
 ##########
 
 
