@@ -53,6 +53,8 @@ gem "jsbundling-rails", "~> 1.1"
 gem 'administrate', "~> 0.18.0"
 gem "bourbon"
 gem 'pundit', '~> 2.3'
+
+gem 'twilio-ruby', '~> 5.76'
 ##########
 
 
