@@ -15,11 +15,13 @@ class AdminUserDashboard < Administrate::BaseDashboard
     reset_password_sent_at: Field::DateTime.with_options(searchable: false),
     type: Field::String.with_options(searchable: false),
     reset_password_token: Field::String.with_options(searchable: false),
+    phone: Field::String.with_options(searchable: false),
   }.freeze
 
   COLLECTION_ATTRIBUTES = %i[
     id
     email
+    phone
     encrypted_password
     first_name
   ].freeze
@@ -45,6 +47,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
     first_name
     last_name
     type
+    phone
   ].freeze
 
   COLLECTION_FILTERS = {}.freeze
