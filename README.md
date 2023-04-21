@@ -23,8 +23,11 @@
 - Icons from Font Awesome
 - x Update the styles for forms
 
-## Refactor TODOS:
-- Refactor user association integration test in post_spec
+## TODOS:
+Integrate validation for phone attr in User:
+  # No spaces or dashes
+  # all characters have to be a number
+  # exactly 10 characters
 
 ## Important stuffs
 
