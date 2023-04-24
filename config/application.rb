@@ -2,6 +2,8 @@ require_relative "boot"
 
 require "rails/all"
 
+require 'kaminari/actionview'
+
 Bundler.require(*Rails.groups)
 
 module Overtime

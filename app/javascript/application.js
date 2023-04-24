@@ -2,4 +2,6 @@
 import "@hotwired/turbo-rails";
 import "./controllers";
 import "./add_jquery";
+import "./pagination";
+
 import * as bootstrap from "bootstrap";
