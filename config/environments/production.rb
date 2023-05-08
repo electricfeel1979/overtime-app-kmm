@@ -21,4 +21,5 @@ Rails.application.configure do
   end
   config.active_record.dump_schema_after_migration = false
   config.serve_static_assets = true
+  config.action_mailer.default_url_options = { :host => 'wlp-overtime.herokuapp.com' }
 end

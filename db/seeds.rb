@@ -5,7 +5,7 @@
                     last_name: 'Montesclaros',
                     phone: '1111111111')
 
-puts "1 Employee created"
+puts "1 employee created"
 
 AdminUser.create(email: 'admin@admin.com', 
             password: '123123', 
@@ -14,7 +14,7 @@ AdminUser.create(email: 'admin@admin.com',
             last_name: 'Admin', 
             phone: '1111111111')
 
-puts "1 Admin User created"
+puts "1 Admin user created"
 
 AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 6.days))
 AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 13.days))
