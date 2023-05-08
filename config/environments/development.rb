@@ -27,6 +27,8 @@ Rails.application.configure do
   config.assets.quiet = true
 
   #kevmm
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
   config.sass.inline_source_maps = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3001 }
 end
