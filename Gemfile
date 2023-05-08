@@ -60,6 +60,8 @@ gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
 
 gem 'rails_12factor'
+
+gem 'honeybadger', '~> 5.2', '>= 5.2.1'
 ##########
 
 

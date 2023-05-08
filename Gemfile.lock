@@ -123,6 +123,7 @@ GEM
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    honeybadger (5.2.1)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.1.5)
@@ -313,6 +314,7 @@ DEPENDENCIES
   devise (~> 4.9)
   dotenv-rails (~> 2.8, >= 2.8.1)
   factory_bot_rails (~> 6.2)
+  honeybadger (~> 5.2, >= 5.2.1)
   importmap-rails
   jbuilder
   jsbundling-rails (~> 1.1)
