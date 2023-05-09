@@ -62,7 +62,6 @@ gem 'kaminari', '~> 1.2', '>= 1.2.2'
 gem 'rails_12factor'
 
 gem 'honeybadger', '~> 5.2', '>= 5.2.1'
+
+gem 'newrelic_rpm', '~> 9.2', '>= 9.2.2'
 ##########
-
-
-
