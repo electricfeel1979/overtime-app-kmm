@@ -15,7 +15,9 @@ class EmployeeDashboard < Administrate::BaseDashboard
     reset_password_sent_at: Field::DateTime.with_options(searchable: false),
     type: Field::String.with_options(searchable: false),
     reset_password_token: Field::String.with_options(searchable: false),
-    phone: Field::String.with_options(searchable: false)
+    phone: Field::String.with_options(searchable: false),
+    ssn: Field::Number.with_options(searchable: true),
+    company: Field::Number.with_options(searchable: false)
   }.freeze
 
   COLLECTION_ATTRIBUTES = %i[
@@ -24,10 +26,12 @@ class EmployeeDashboard < Administrate::BaseDashboard
     phone
     encrypted_password
     first_name
+    ssn
   ].freeze
 
   SHOW_PAGE_ATTRIBUTES = %i[
-    id
+    ssn
+    company
     email
     encrypted_password
     first_name
@@ -42,10 +46,12 @@ class EmployeeDashboard < Administrate::BaseDashboard
   ].freeze
 
   FORM_ATTRIBUTES = %i[
+    ssn
     email
     password
     first_name
     last_name
+    company
     type
     phone
   ].freeze
