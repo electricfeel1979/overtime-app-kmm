@@ -9,7 +9,7 @@ class PostPolicy < ApplicationPolicy
   end
 
   private
-  
+
   def user_or_admin
     record.user_id == user.id || admin?
   end

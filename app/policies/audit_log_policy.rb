@@ -1,6 +1,6 @@
 class AuditLogPolicy < ApplicationPolicy
   def index?
-    # TODO Refactor
+    # TODO: Refactor
     return true if admin?
   end
 
@@ -9,7 +9,8 @@ class AuditLogPolicy < ApplicationPolicy
   end
 
   private
-    def admin?
-      admin_types.include?(user.type)
-    end
+
+  def admin?
+    admin_types.include?(user.type)
+  end
 end

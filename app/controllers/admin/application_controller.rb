@@ -15,10 +15,10 @@ module Admin
 
     def authenticate_admin
       # debugger
-      unless Admin.admin_types.include?(current_user[:type])
-        flash[:alert] = "You are not authorized to access this page"
-        redirect_to(root_path)
-      end
+      return if Admin.admin_types.include?(current_user[:type])
+
+      flash[:alert] = 'You are not authorized to access this page'
+      redirect_to(root_path)
     end
 
     # Override this value to specify the number of elements to display at a time

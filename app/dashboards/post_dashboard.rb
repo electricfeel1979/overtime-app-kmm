@@ -1,4 +1,4 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class PostDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -14,7 +14,7 @@ class PostDashboard < Administrate::BaseDashboard
     user: Field::BelongsTo.with_options(searchable: false),
     created_at: Field::DateTime.with_options(searchable: false),
     updated_at: Field::DateTime.with_options(searchable: false),
-    status: Field::Text.with_options(searchable: true),
+    status: Field::Text.with_options(searchable: true)
   }.freeze
 
   # COLLECTION_ATTRIBUTES

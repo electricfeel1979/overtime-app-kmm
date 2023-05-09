@@ -5,8 +5,8 @@ RSpec.describe User, type: :model do
     @user = FactoryBot.create(:user)
   end
 
-  it "can be created" do
-  		expect(@user).to be_valid
+  it 'can be created' do
+    expect(@user).to be_valid
   end
 
   describe 'validations' do
@@ -36,7 +36,7 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe "custom name method" do
+  describe 'custom name method' do
     it 'has a full name method that combines first and last name' do
       expect(@user.full_name).to eq('MONTESCLAROS, KEVIN')
     end

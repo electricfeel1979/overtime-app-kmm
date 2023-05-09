@@ -4,7 +4,7 @@ module ApplicationHelper
   end
 
   def active?(path)
-    "active" if current_page?(path)
+    'active' if current_page?(path)
   end
 
   def employee?
@@ -15,13 +15,13 @@ module ApplicationHelper
     admin_types.include?(current_user.type)
   end
 
-  def status_label status
+  def status_label(status)
     status_span_generator status
   end
 
   private
 
-  def status_span_generator status
+  def status_span_generator(status)
     case status
     when 'submitted'
       content_tag(:span, status.titleize, class: 'badge bg-primary')

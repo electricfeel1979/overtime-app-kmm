@@ -4,18 +4,18 @@ describe 'navigate' do
   let(:user) { FactoryBot.create(:user) }
 
   let(:post) do
-    Post.create(date: Date.today, rationale: "Rationale", user_id: user.id, overtime_request: 3.5)
+    Post.create(date: Date.today, rationale: 'Rationale', user_id: user.id, overtime_request: 3.5)
   end
 
   before do
-    login_as(user, :scope => :user)
+    login_as(user, scope: :user)
   end
 
   describe 'index' do
     before do
       visit posts_path
     end
-    
+
     it 'can be reached successfully' do
       expect(page.status_code).to eq(200)
     end
@@ -34,7 +34,8 @@ describe 'navigate' do
 
     it 'has a scope so that only post creators can see their posts' do
       non_authorized_user = FactoryBot.build_stubbed(:non_authorized_user)
-      FactoryBot.build_stubbed(:post_from_other_user, rationale: "This post should'nt be seen", user: non_authorized_user, overtime_request: 3.5)
+      FactoryBot.build_stubbed(:post_from_other_user, rationale: "This post should'nt be seen",
+                                                      user: non_authorized_user, overtime_request: 3.5)
 
       visit posts_path
 
@@ -44,21 +45,22 @@ describe 'navigate' do
 
   describe 'new' do
     it 'has a link from the homepage' do
-      employee = Employee.create(first_name: 'Employee', last_name: 'Authorized', email: "employee@example.com", password: "asdfasdf", password_confirmation: "asdfasdf", phone: "5555555555")
-      login_as(employee, :scope => :user)
+      employee = Employee.create(first_name: 'Employee', last_name: 'Authorized', email: 'employee@example.com',
+                                 password: 'asdfasdf', password_confirmation: 'asdfasdf', phone: '5555555555')
+      login_as(employee, scope: :user)
       visit root_path
 
-      click_link("new_post_from_nav")
+      click_link('new_post_from_nav')
       expect(page.status_code).to eq(200)
     end
   end
 
   describe 'delete' do
-    it 'can be deleted' do 
+    it 'can be deleted' do
       logout(:user)
 
       delete_user = FactoryBot.create(:user)
-      login_as(delete_user, :scope => :user)
+      login_as(delete_user, scope: :user)
 
       post_to_delete = Post.create(date: Date.today, rationale: 'asdf', user_id: delete_user.id, overtime_request: 3.5)
 
@@ -82,7 +84,7 @@ describe 'navigate' do
       fill_in 'post[rationale]', with: 'Some rationale'
       fill_in 'post[overtime_request]', with: 4.5
 
-      expect { click_on "Save" }.to change(Post, :count).by(1)
+      expect { click_on 'Save' }.to change(Post, :count).by(1)
     end
 
     it 'will have a user associated it' do
@@ -103,13 +105,13 @@ describe 'navigate' do
       fill_in 'post[rationale]', with: 'Edited content'
       click_on 'Save'
 
-      expect(page).to have_content("Edited content")
+      expect(page).to have_content('Edited content')
     end
 
     it 'cannot be edited by a non authorized user' do
       logout(:user)
       non_authorized_user = FactoryBot.create(:non_authorized_user)
-      login_as(non_authorized_user, :scope => :user)
+      login_as(non_authorized_user, scope: :user)
 
       visit edit_post_path(post)
 

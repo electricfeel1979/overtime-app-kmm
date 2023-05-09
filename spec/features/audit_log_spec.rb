@@ -2,9 +2,9 @@ require 'rails_helper'
 
 describe 'AuditLog Feature' do
   describe 'index' do
-    before do 
+    before do
       admin_user = FactoryBot.create(:admin_user)
-      login_as(admin_user, :scope => :user)
+      login_as(admin_user, scope: :user)
       FactoryBot.create(:audit_log)
     end
 
@@ -22,7 +22,7 @@ describe 'AuditLog Feature' do
       logout(:user)
       user = FactoryBot.create(:user)
 
-      login_as(user, :scope => :user)
+      login_as(user, scope: :user)
 
       visit audit_logs_path
 

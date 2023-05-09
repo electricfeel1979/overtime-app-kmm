@@ -5,7 +5,7 @@ describe 'Homepage' do
     post = FactoryBot.create(:post)
     admin_user = FactoryBot.create(:admin_user)
 
-    login_as(admin_user, :scope => :user)
+    login_as(admin_user, scope: :user)
 
     visit root_path
 
@@ -18,7 +18,7 @@ describe 'Homepage' do
     audit_log = FactoryBot.create(:audit_log)
     user = FactoryBot.create(:user)
 
-    login_as(user, :scope => :user)
+    login_as(user, scope: :user)
 
     audit_log.update(user_id: user.id)
 
